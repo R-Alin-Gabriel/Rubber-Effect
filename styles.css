@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background: rgba(0, 0, 0, 0.932);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 2.5em;
+  color: white;
+  font-weight: 400;
+}
+
+.rubber-letter {
+  transition: 0.3s ease-out color;
+  transition-delay: 0s;
+  transition-duration: 1.2s;
+}
+.rubber-letter:hover {
+  display: inline-block;
+  cursor: pointer;
+  animation: rubberLater 0.8s ease-out forwards;
+  color: #0f0;
+  text-shadow: 0 0 120px #0f0;
+  transition: 0.3s;
+}
+@keyframes rubberLater {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1.05, 1);
+  }
+}
